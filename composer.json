@@ -1,0 +1,19 @@
+{
+    "name": "mfurq/sia",
+    "require": {
+        "phpoffice/phpexcel": "^1.8",
+        "phpoffice/phpspreadsheet": "^1.8",
+        "mpdf/mpdf": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mfurq\\Sia\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "furiscom",
+            "email": "mfurqanhakim139@unama.ac.id"
+        }
+    ]
+}
