@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2024 at 12:16 AM
+-- Generation Time: Dec 29, 2024 at 07:38 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -30,50 +30,201 @@ SET time_zone = "+00:00";
 CREATE TABLE `attendance` (
   `id` int(11) NOT NULL,
   `student_id` int(11) NOT NULL,
+  `schedule_id` int(11) NOT NULL,
   `date` date NOT NULL,
   `status` varchar(20) NOT NULL,
-  `Tingkat - Rombel` varchar(512) NOT NULL
+  `Tingkat - Rombel` varchar(512) NOT NULL,
+  `mata_pelajaran_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `attendance`
 --
 
-INSERT INTO `attendance` (`id`, `student_id`, `date`, `status`, `Tingkat - Rombel`) VALUES
-(1, 1, '2024-12-01', 'Hadir', ''),
-(2, 3, '2024-12-01', 'Hadir', ''),
-(3, 2, '2024-12-01', 'Hadir', ''),
-(4, 20, '2024-12-01', 'Tidak Hadir', 'Kelas 8 - 01'),
-(5, 21, '2024-12-01', 'Tidak Hadir', 'Kelas 8 - 01'),
-(6, 22, '2024-12-01', 'Hadir', 'Kelas 8 - 01'),
-(7, 23, '2024-12-01', 'Hadir', 'Kelas 8 - 01'),
-(8, 24, '2024-12-01', 'Hadir', 'Kelas 8 - 01'),
-(9, 25, '2024-12-01', 'Hadir', 'Kelas 8 - 01'),
-(10, 26, '2024-12-01', 'Hadir', 'Kelas 8 - 01'),
-(11, 27, '2024-12-01', 'Hadir', 'Kelas 8 - 01'),
-(76, 45, '2024-12-01', 'Sakit', 'Kelas 9 - 01'),
-(77, 46, '2024-12-01', 'Sakit', 'Kelas 9 - 01'),
-(78, 47, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(79, 48, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(80, 49, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(81, 50, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(82, 51, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(83, 52, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(84, 53, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(85, 54, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(86, 55, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(87, 56, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(88, 57, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(89, 58, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(90, 59, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(91, 60, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(92, 61, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(93, 62, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(94, 63, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(95, 64, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(96, 65, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(97, 66, '2024-12-01', 'Hadir', 'Kelas 9 - 01'),
-(98, 67, '2024-12-01', 'Hadir', 'Kelas 9 - 01');
+INSERT INTO `attendance` (`id`, `student_id`, `schedule_id`, `date`, `status`, `Tingkat - Rombel`, `mata_pelajaran_id`) VALUES
+(301, 20, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(302, 21, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(303, 22, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(304, 23, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(305, 24, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(306, 25, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(307, 26, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(308, 27, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(309, 28, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(310, 29, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(311, 30, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(312, 31, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(313, 32, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(314, 33, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(315, 34, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(316, 35, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(317, 36, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(318, 37, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(319, 38, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(320, 39, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(321, 40, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(322, 41, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(323, 42, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(324, 43, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(325, 44, 186, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 1),
+(326, 20, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(327, 21, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(328, 22, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(329, 23, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(330, 24, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(331, 25, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(332, 26, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(333, 27, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(334, 28, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(335, 29, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(336, 30, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(337, 31, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(338, 32, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(339, 33, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(340, 34, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(341, 35, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(342, 36, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(343, 37, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(344, 38, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(345, 39, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(346, 40, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(347, 41, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(348, 42, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(349, 43, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(350, 44, 187, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 17),
+(351, 20, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(352, 21, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(353, 22, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(354, 23, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(355, 24, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(356, 25, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(357, 26, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(358, 27, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(359, 28, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(360, 29, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(361, 30, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(362, 31, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(363, 32, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(364, 33, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(365, 34, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(366, 35, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(367, 36, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(368, 37, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(369, 38, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(370, 39, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(371, 40, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(372, 41, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(373, 42, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(374, 43, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(375, 44, 188, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 18),
+(376, 20, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(377, 21, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(378, 22, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(379, 23, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(380, 24, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(381, 25, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(382, 26, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(383, 27, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(384, 28, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(385, 29, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(386, 30, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(387, 31, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(388, 32, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(389, 33, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(390, 34, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(391, 35, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(392, 36, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(393, 37, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(394, 38, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(395, 39, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(396, 40, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(397, 41, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(398, 42, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(399, 43, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(400, 44, 190, '2024-12-21', 'Hadir', 'Kelas 8 - 01', 19),
+(401, 70, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(402, 71, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(403, 72, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(404, 73, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(405, 74, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(406, 75, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(407, 76, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(408, 77, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(409, 78, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(410, 79, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(411, 80, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(412, 81, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(413, 82, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(414, 83, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(415, 84, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(416, 85, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(417, 86, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(418, 87, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(419, 88, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(420, 89, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(421, 90, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(422, 91, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(423, 92, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(424, 93, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(425, 94, 186, '2024-12-21', 'Hadir', 'Kelas 9 - 02', 1),
+(426, 1, 186, '2024-12-21', 'Hadir', 'Kelas 7 - 01', 1),
+(427, 2, 186, '2024-12-21', 'Hadir', 'Kelas 7 - 01', 1),
+(428, 3, 186, '2024-12-21', 'Hadir', 'Kelas 7 - 01', 1),
+(429, 4, 186, '2024-12-21', 'Hadir', 'Kelas 7 - 01', 1),
+(430, 5, 186, '2024-12-21', 'Hadir', 'Kelas 7 - 01', 1),
+(431, 6, 186, '2024-12-21', 'Hadir', 'Kelas 7 - 01', 1),
+(432, 7, 186, '2024-12-21', 'Hadir', 'Kelas 7 - 01', 1),
+(433, 8, 186, '2024-12-21', 'Hadir', 'Kelas 7 - 01', 1),
+(434, 9, 186, '2024-12-21', 'Hadir', 'Kelas 7 - 01', 1),
+(435, 10, 186, '2024-12-21', 'Hadir', 'Kelas 7 - 01', 1),
+(436, 11, 186, '2024-12-21', 'Hadir', 'Kelas 7 - 01', 1),
+(437, 12, 186, '2024-12-21', 'Hadir', 'Kelas 7 - 01', 1),
+(438, 13, 186, '2024-12-21', 'Hadir', 'Kelas 7 - 01', 1),
+(439, 14, 186, '2024-12-21', 'Hadir', 'Kelas 7 - 01', 1),
+(440, 15, 186, '2024-12-21', 'Hadir', 'Kelas 7 - 01', 1),
+(441, 16, 186, '2024-12-21', 'Hadir', 'Kelas 7 - 01', 1),
+(442, 17, 186, '2024-12-21', 'Hadir', 'Kelas 7 - 01', 1),
+(443, 18, 186, '2024-12-21', 'Hadir', 'Kelas 7 - 01', 1),
+(444, 19, 186, '2024-12-21', 'Sakit', 'Kelas 7 - 01', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mata_pelajaran`
+--
+
+CREATE TABLE `mata_pelajaran` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `mata_pelajaran`
+--
+
+INSERT INTO `mata_pelajaran` (`id`, `nama`) VALUES
+(1, 'Pembiasaan'),
+(2, 'IPS'),
+(3, 'IPA'),
+(4, 'Tajwid'),
+(5, 'Bahasa Inggris'),
+(6, 'Shalat Ashar Berjamaah'),
+(7, 'Bahasa Arab'),
+(8, 'Fiqih'),
+(9, 'Akhlak'),
+(10, 'Matematika'),
+(11, 'Bahasa Indonesia'),
+(12, 'PKN'),
+(13, 'Tauhid'),
+(14, 'SKI'),
+(15, 'SBK'),
+(16, 'Sorof'),
+(17, 'Nahwu'),
+(18, 'Hadist'),
+(19, 'Al-Qur\'an'),
+(20, 'Hafalan Doa'),
+(21, 'Tahfidz'),
+(22, 'Praktik Ibadah');
 
 -- --------------------------------------------------------
 
@@ -88,6 +239,97 @@ CREATE TABLE `reports` (
   `year` int(11) DEFAULT NULL,
   `report_data` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `schedule`
+--
+
+CREATE TABLE `schedule` (
+  `id` int(11) NOT NULL,
+  `hari` varchar(10) DEFAULT NULL,
+  `jam_mulai` time DEFAULT NULL,
+  `jam_selesai` time DEFAULT NULL,
+  `tingkat` varchar(512) DEFAULT NULL,
+  `kode` int(11) DEFAULT NULL,
+  `mata_pelajaran_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `schedule`
+--
+
+INSERT INTO `schedule` (`id`, `hari`, `jam_mulai`, `jam_selesai`, `tingkat`, `kode`, `mata_pelajaran_id`) VALUES
+(131, 'Senin', '07:00:00', '07:30:00', NULL, NULL, 1),
+(132, 'Senin', '07:30:00', '08:10:00', 'Kelas 7 - 01', 4, 2),
+(133, 'Senin', '08:10:00', '09:00:00', 'Kelas 7 - 01', 4, 2),
+(134, 'Senin', '08:10:00', '09:00:00', 'Kelas 8 - 01', 7, 3),
+(135, 'Senin', '09:00:00', '09:30:00', NULL, NULL, 0),
+(136, 'Senin', '09:30:00', '10:10:00', 'Kelas 8 - 01', 11, 4),
+(137, 'Senin', '09:30:00', '10:10:00', 'Kelas 8 - 01', 7, 3),
+(138, 'Senin', '10:10:00', '10:50:00', 'Kelas 8 - 01', 11, 4),
+(139, 'Senin', '10:10:00', '10:50:00', 'Kelas 7 - 01', 4, 2),
+(140, 'Senin', '10:50:00', '11:10:00', 'Kelas 8 - 01', 7, 3),
+(141, 'Senin', '11:10:00', '11:50:00', 'Kelas 7 - 01', 4, 2),
+(142, 'Senin', '11:50:00', '13:30:00', NULL, NULL, 0),
+(143, 'Senin', '13:30:00', '14:10:00', 'Kelas 8 - 01', 5, 5),
+(144, 'Senin', '14:10:00', '15:20:00', 'Kelas 8 - 01', 5, 5),
+(145, 'Senin', '15:20:00', '16:00:00', NULL, NULL, 6),
+(146, 'Senin', '16:00:00', '17:00:00', 'Kelas 9 - 01', 11, 7),
+(147, 'Senin', '16:00:00', '17:00:00', 'Kelas 9 - 02', 11, 7),
+(148, 'Selasa', '07:00:00', '07:30:00', NULL, NULL, 1),
+(149, 'Selasa', '07:30:00', '08:10:00', 'Kelas 7 - 01', NULL, 1),
+(150, 'Selasa', '08:10:00', '09:00:00', 'Kelas 9 - 01', 9, 8),
+(151, 'Selasa', '08:10:00', '09:00:00', 'Kelas 9 - 01', 10, 9),
+(152, 'Selasa', '09:00:00', '09:30:00', NULL, NULL, 0),
+(153, 'Selasa', '09:30:00', '10:10:00', 'Kelas 9 - 01', 14, 10),
+(154, 'Selasa', '10:10:00', '10:50:00', 'Kelas 9 - 01', 10, 9),
+(155, 'Selasa', '10:10:00', '10:50:00', 'Kelas 9 - 01', 9, 8),
+(156, 'Selasa', '11:50:00', '13:30:00', NULL, NULL, 0),
+(157, 'Selasa', '13:30:00', '14:10:00', 'Kelas 8 - 01', 5, 5),
+(158, 'Selasa', '15:20:00', '16:00:00', NULL, NULL, 6),
+(159, 'Selasa', '16:00:00', '17:00:00', 'Kelas 9 - 01', 11, 7),
+(160, 'Selasa', '16:00:00', '17:00:00', 'Kelas 9 - 02', 11, 7),
+(161, 'Rabu', '07:00:00', '07:30:00', NULL, NULL, 1),
+(162, 'Rabu', '07:30:00', '08:10:00', 'Kelas 9 - 01', 11, 13),
+(163, 'Rabu', '07:30:00', '08:10:00', 'Kelas 8 - 01', 8, 11),
+(164, 'Rabu', '08:10:00', '09:00:00', 'Kelas 7 - 01', 3, 12),
+(165, 'Rabu', '09:00:00', '09:30:00', NULL, NULL, 0),
+(166, 'Rabu', '09:30:00', '10:10:00', 'Kelas 7 - 01', 3, 12),
+(167, 'Rabu', '10:10:00', '10:50:00', 'Kelas 9 - 01', 11, 13),
+(168, 'Rabu', '11:50:00', '13:30:00', NULL, NULL, 0),
+(169, 'Rabu', '13:30:00', '14:10:00', 'Kelas 8 - 01', 5, 5),
+(170, 'Rabu', '15:20:00', '16:00:00', NULL, NULL, 6),
+(171, 'Rabu', '16:00:00', '17:00:00', 'Kelas 9 - 01', 11, 7),
+(172, 'Rabu', '16:00:00', '17:00:00', 'Kelas 9 - 02', 11, 7),
+(173, 'Kamis', '07:00:00', '07:30:00', NULL, NULL, 1),
+(174, 'Kamis', '07:30:00', '08:10:00', 'Kelas 8 - 01', 8, 14),
+(175, 'Kamis', '07:30:00', '08:10:00', 'Kelas 7 - 01', 5, 15),
+(176, 'Kamis', '08:10:00', '09:00:00', 'Kelas 7 - 01', 5, 15),
+(177, 'Kamis', '09:00:00', '09:30:00', NULL, NULL, 0),
+(178, 'Kamis', '09:30:00', '10:10:00', 'Kelas 8 - 01', 7, 16),
+(179, 'Kamis', '10:10:00', '10:50:00', 'Kelas 8 - 01', 8, 14),
+(180, 'Kamis', '10:10:00', '10:50:00', 'Kelas 8 - 01', 7, 16),
+(181, 'Kamis', '11:50:00', '13:30:00', NULL, NULL, 0),
+(182, 'Kamis', '13:30:00', '14:10:00', 'Kelas 9 - 01', 13, 5),
+(183, 'Kamis', '15:20:00', '16:00:00', NULL, NULL, 6),
+(184, 'Kamis', '16:00:00', '17:00:00', 'Kelas 9 - 01', 11, 7),
+(185, 'Kamis', '16:00:00', '17:00:00', 'Kelas 9 - 02', 11, 7),
+(186, 'Jumat', '07:00:00', '07:30:00', NULL, NULL, 1),
+(187, 'Jumat', '07:30:00', '08:10:00', 'Kelas 8 - 01', 7, 17),
+(188, 'Jumat', '08:10:00', '08:50:00', 'Kelas 9 - 01', 13, 18),
+(189, 'Jumat', '08:50:00', '09:20:00', NULL, NULL, 0),
+(190, 'Jumat', '09:30:00', '10:10:00', 'Kelas 9 - 01', 11, 19),
+(191, 'Jumat', '11:50:00', '13:30:00', NULL, NULL, 0),
+(192, 'Sabtu', '07:00:00', '07:30:00', NULL, NULL, 1),
+(193, 'Sabtu', '07:30:00', '08:10:00', 'Kelas 7 - 01', 2, 20),
+(194, 'Sabtu', '08:10:00', '09:00:00', 'Kelas 7 - 01', 2, 20),
+(195, 'Sabtu', '09:00:00', '09:30:00', NULL, NULL, 0),
+(196, 'Sabtu', '09:30:00', '10:10:00', 'Kelas 7 - 01', 2, 21),
+(197, 'Sabtu', '10:10:00', '10:50:00', 'Kelas 7 - 01', 2, 21),
+(198, 'Sabtu', '11:10:00', '11:50:00', 'Kelas 8 - 01', 7, 22),
+(199, 'Sabtu', '11:50:00', '13:30:00', NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -189,8 +431,31 @@ INSERT INTO `siswa` (`No`, `Nama Lengkap`, `NISN`, `NIK`, `Tempat Lahir`, `Tangg
 ('21', 'Anggin April Prihatiwi', '0108237808', '\'1571035404100022', 'Jambi', '2010-04-14', 'Kelas 9 - 01', '14 th, 3 bln', 'Aktif', 'Perempuan', 'JL. PELABUHAN RAYA KM.5, RT. 04 MUARA KUMPEH, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'ASNAWI', 'Prihatin', 'ASNAWI', 65),
 ('22', 'Aby Rizky Pratama', '3109981512', '\'1571080101100001', 'Jambi', '2010-01-01', 'Kelas 9 - 01', '14 th, 7 bln', 'Aktif', 'Laki-laki', 'Jl. SUNAN GUNUNG JATI KENALI ASAM BAWAH, KOTA BARU, KOTA JAMBI, JAMBI, 36129, 36129', '', 'Tidak Ada', 'Tidak Ada', '', 'ZULFA UMRA', 'Lely Maheny Purba', 'ZULFA UMRA', 66),
 ('23', 'SHOFWA HUMAIRO', '0107278051', '\'1505066208100001', 'Muaro Kumpeh', '2010-08-22', 'Kelas 9 - 01', '13 th, 11 bln', 'Aktif', 'Perempuan', 'MUARA KUMOEH MUARA KUMPEH, KUMPEH ULU, MUARO JAMBI, JAMBI, 36668, 36668', '', 'Tidak Ada', 'Tidak Ada', '', 'A. ZAIRONI', 'Fadila', 'A. ZAIRONI', 67),
-(NULL, 'a', 'a', 'a', 'a', '1991-02-01', '1', '1', '1', 'Laki-laki', '1', '1', '1', '1', '1', '1', '1', '1', 68),
-('2', 'a', 'a', '2', '2', '1331-02-02', 'Kelas 8 - 01', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'b', 'a', 69);
+('1', 'M.FAHMI IRSYAD', '0091537885', '\'1571022308090001', 'JAMBI', '2009-08-23', 'Kelas 9 - 02', '14 th, 11 bln', 'Aktif', 'Laki-laki', 'Muara Kumpeh, Rt.04 MUARA KUMPEH, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'SUJADI', 'MUNFA\'ATI', 'SUJADI', 70),
+('2', 'ABDUL HAFIZ ANSORI', '0101940958', '\'1505061001100002', 'MUARA KUMPEH', '2010-01-10', 'Kelas 9 - 02', '14 th, 7 bln', 'Aktif', 'Laki-laki', 'muara kumpeh, Rt/Rw. 004/000 MUARA KUMPEH, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'Sarpani', 'ZURYANI', 'Sarpani', 71),
+('3', 'QUROTA AKYUN', '0118665701', '\'1571034805110001', 'JAMBI', '2011-05-08', 'Kelas 9 - 02', '13 th, 3 bln', 'Aktif', 'Perempuan', 'Jl. Kerajaan Melayu Dusun Tanjung Sari TANJUNG SARI, JAMBI TIMUR, KOTA JAMBI, JAMBI, 36147, 36147', '', 'Tidak Ada', 'Tidak Ada', '', 'SUNARTO', 'KOMALA DEWI', 'SUNARTO', 72),
+('4', 'DARWAN SANI', '0105523458', '\'1507100104100003', 'LAGAN TENGAH', '2010-04-01', 'Kelas 9 - 02', '14 th, 4 bln', 'Aktif', 'Laki-laki', 'Desa Muara Kumpeh, Rt. 004 MUARA KUMPEH, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'USMAN', 'KHAIRUN NISAR', 'USMAN', 73),
+('5', 'AHMAD AZZAM', '0106721413', '\'1508050704100001', 'MUARA BUNGO', '2010-04-07', 'Kelas 9 - 02', '14 th, 4 bln', 'Aktif', 'Laki-laki', 'DESA MUARA KUMPEH RT.04 CANDI, TANAH SEPENGGAL, BUNGO, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'M. AHMAD  YANI', 'HJ. NOR ASIAH', 'M. AHMAD  YANI', 74),
+('6', 'M. ZIQRY RAMADHAN', '0105695091', '\'1571030608100081', 'JAMBI', '2010-08-06', 'Kelas 9 - 02', '14 th, 0 bln', 'Aktif', 'Laki-laki', 'LR. Hidayat Dusun Rajawali RAJAWALI, JAMBI TIMUR, KOTA JAMBI, JAMBI, 36143, 36143', '', 'Tidak Ada', 'Tidak Ada', '', 'MUHAMAD SAPRI', 'DINA WISMA', 'MUHAMAD SAPRI', 75),
+('7', 'RIFKY RAMADHAN', '0105145542', '\'1571023108100041', 'JAMBI', '2010-08-31', 'Kelas 9 - 02', '13 th, 11 bln', 'Aktif', 'Laki-laki', 'JL. Marene, Rt. 019 EKA JAYA, PAAL MERAH, KOTA JAMBI, JAMBI, 36135, 36135', '', 'Tidak Ada', 'Tidak Ada', '', 'EKO HARIYANTO', 'LISMAYANTI', 'EKO HARIYANTO', 76),
+('8', 'MUHAMMAD AL IQBAL', '0101403421', '\'1505112106100002', 'MUARO JAMBI', '2010-06-21', 'Kelas 9 - 02', '14 th, 1 bln', 'Aktif', 'Laki-laki', 'JL. H.M.YUSUF NASRI NO.37 WIJAYA PURA, JAMBI SELATAN, KOTA JAMBI, JAMBI, 36131, 36131', '', 'Tidak Ada', 'Tidak Ada', '', 'RAHMAT', 'IDA YANI', 'RAHMAT', 77),
+('9', 'MUHAMAD SOLEH', '0092935053', '\'1505022802090003', 'JAMBI', '2009-02-28', 'Kelas 9 - 02', '15 th, 5 bln', 'Aktif', 'Laki-laki', 'SUKO AWIN JAYO, Rt.009 SUKO AWIN JAYA, SEKERNAN, MUARO JAMBI, JAMBI, 36381, 36381', '', 'Tidak Ada', 'Tidak Ada', '', 'ADI SAPUTRA', 'JUWITA ANGGRAINI', 'ADI SAPUTRA', 78),
+('10', 'ANNISA USHOLEHA', '0093176976', '\'1505054404080001', 'JAMBI', '2009-04-04', 'Kelas 9 - 02', '15 th, 4 bln', 'Aktif', 'Perempuan', 'Desa Muara Kumpeh, Rt. 04 MUARA KUMPEH, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'ROHADI', 'MATURIAH', 'MATURIAH', 79),
+('11', 'Sri Mulyati', '0093860566', '\'1502175509090001', 'Kampung Limo', '2009-06-15', 'Kelas 9 - 02', '15 th, 1 bln', 'Aktif', 'Perempuan', 'Desa Muara kumpeh, Rt. 004 MUARA KUMPEH, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'Ardison', 'Martini', 'Ardison', 80),
+('12', 'NABILA THOYBA', '0091049243', '\'1505065303090002', 'JAMBI', '2009-03-13', 'Kelas 9 - 02', '15 th, 4 bln', 'Aktif', 'Perempuan', 'JL. PELABUHAN RAYA KM.5, RT. 04 MUARA KUMPEH, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'HAZIRIN', 'EVI FITRIANI', 'HAZIRIN', 81),
+('13', 'CHIKA WARDANA PUTRI', '0102213460', '\'1505066901100001', 'MUARA KUMPEH', '2010-01-29', 'Kelas 9 - 02', '14 th, 6 bln', 'Aktif', 'Perempuan', 'JL. PELABUHAN RAYA KM.5, RT. 04 MUARA KUMPEH, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'SOFYAN HADI', 'ANALIA', 'SOFYAN HADI', 82),
+('14', 'KALILAH IRMA PUTRI', '0108097250', '\'1505116004100001', 'MUARO JAMBI', '2010-04-20', 'Kelas 9 - 02', '14 th, 3 bln', 'Aktif', 'Perempuan', 'JL. PELABUHAN RAYA KM.5, RT. 04 MUARA KUMPEH, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'IRMANSYAH', 'SITI KHASANAH', 'IRMANSYAH', 83),
+('15', 'Neiza Grezz', '0087232518', '\'1571035007080081', 'Jambi', '2008-07-10', 'Kelas 9 - 02', '16 th, 1 bln', 'Aktif', 'Perempuan', 'JL. PELABUHAN RAYA KM.5, RT. 04 MUARA KUMPEH, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'SAMIN', 'Sunarsih', 'SAMIN', 84),
+('16', 'Febriansyah Al Fikri', '0094327092', '', 'Jambi', '2009-02-06', 'Kelas 9 - 02', '15 th, 6 bln', 'Aktif', 'Laki-laki', 'JL. PELABUHAN RAYA KM.5, RT. 04 MUARA KUMPEH, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'Taufik hidayat', 'Fitriani', 'Taufik hidayat', 85),
+('17', 'SYAIFULLAH ARROSIDI', '0107393000', '\'1505061108100002', 'JAMBI', '2010-08-11', 'Kelas 9 - 02', '14 th, 0 bln', 'Aktif', 'Laki-laki', 'JL. PELABUHAN RAYA KM.5, RT. 04 MUARA KUMPEH, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'FAHRUL ROZI', 'PARTIWI', 'FAHRUL ROZI', 86),
+('18', 'LUTHFI FATHURRAHMAN', '3109488839', '\'1505061510100001', 'Muaro Jambi', '2010-10-15', 'Kelas 9 - 02', '13 th, 9 bln', 'Aktif', 'Laki-laki', 'Jl. Pudak, Rt. 04 PUDAK, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'SUJAMIN', 'ERNI', 'SUJAMIN', 87),
+('19', 'MUHAMMAD ZAKI MUBAROK', '0041872025', '', 'PUDAK', '2004-11-20', 'Kelas 9 - 02', '19 th, 8 bln', 'Aktif', 'Laki-laki', 'Jl. Pudak, Rt. 22 PUDAK, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'SALMAN', 'NURUL UYUNI', 'SALMAN', 88),
+('20', 'ILHAM SURYA FITRAH', '0095994547', '\'1571020410090061', 'Jambi', '2009-10-04', 'Kelas 9 - 02', '14 th, 10 bln', 'Aktif', 'Laki-laki', 'Jl. Pelabuhan Talang Duku, Rt. 10 MUARA KUMPEH, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'BAMBANG UTORO', 'Mila Karmila', 'BAMBANG UTORO', 89),
+('21', 'Nizhan Pradipta', '0099241675', '\'1504012602090002', 'Simpang Rantau Gedang', '2009-02-26', 'Kelas 9 - 02', '15 th, 5 bln', 'Aktif', 'Laki-laki', 'Jl. Pelabuhan Talang Duku, Rt. 08 MUARA KUMPEH, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'FAUZI', 'Roma Yana', 'FAUZI', 90),
+('22', 'NURIZATUL KHOTIMA', '0099826630', '\'1504024906090001', 'RAMBUTAN MASAM', '2009-06-09', 'Kelas 9 - 02', '15 th, 2 bln', 'Aktif', 'Perempuan', 'JL. PELABUHAN RAYA KM.5, RT. 04 MUARA KUMPEH, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'Fatihi', 'SITI AMINAH', 'Fatihi', 91),
+('23', 'WAHYU BRYLIANDO PRATAMA', '0103075996', '\'1571013006100021', 'Jambi', '2010-06-30', 'Kelas 9 - 02', '14 th, 1 bln', 'Aktif', 'Laki-laki', 'JL. PELABUHAN RAYA KM.5, RT. 04 MUARA KUMPEH, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'Hendra kusuma wardana', 'LANI PURNAMA SARI', 'Hendra kusuma wardana', 92),
+('24', 'M. LATIF SIDDIQ', '0101390347', '\'1404100408100002', 'Tanah Merah', '2010-08-04', 'Kelas 9 - 02', '14 th, 0 bln', 'Aktif', 'Laki-laki', 'JL. PELABUHAN RAYA KM.5, RT. 04 MUARA KUMPEH, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'Helman', 'Dahrumiyana, S.Pd', 'Helman', 93),
+('25', 'DEKA SAPUTRA', '0103754783', '\'1218092401100001', 'LAMPUNG', '2010-01-24', 'Kelas 9 - 02', '14 th, 6 bln', 'Aktif', 'Laki-laki', 'JL. PELABUHAN RAYA KM.5, RT. 04 MUARA KUMPEH, KUMPEH ULU, MUARO JAMBI, JAMBI, 36373, 36373', '', 'Tidak Ada', 'Tidak Ada', '', 'Enggar wansyah', 'NURLINAWATI HASIBUAN', 'Enggar wansyah', 94);
 
 -- --------------------------------------------------------
 
@@ -212,15 +477,11 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
 (1, 'admin', 'admin123', 'admin'),
 (2, 'guru', 'guru123', 'guru'),
-(3, 'walikelas', 'walikelas123', 'wali_kelas'),
-(4, 'koordinator', 'koordinator123', ''),
+(3, 'w', '$2y$10$pab87O2pyYP1URDksV8jhOh/ExvuGLGJN5igYS1ihXv6zRTOGsURu', 'guru'),
 (5, 'kepalasekolah', 'kepalasekolah123', 'kepala_sekolah'),
 (6, '1', '$2y$10$nCaC4XWzyJHsJSFrhITV8uAbqx1vQCrkxjulBL4wno9zN5SziaUF2', 'admin'),
-(7, '2', '$2y$10$7dmx11Sc4icmbz9KWCxkEeCwvfjoUbSH1WxFRiAXlVpKfwwx0ukDi', 'admin'),
 (8, '3', '$2y$10$Q/mE0ciKneAYPXnvXiGF/.25.LoMy78D6rIL0A3obE64VrK3ZsAuq', 'admin'),
-(9, '4', '$2y$10$GjoCQ8GyDLK5/4A5PyQ05OoAzr1muBCqmDYX6IkhqMPNwjffbJPzW', 'guru'),
-(10, 'g', '$2y$10$q5wV0dcnz6rwjFKKIBT2rOlrks0X8nGglRXMi/fYRrJJdGOuEKF/.', 'guru'),
-(11, 'g', '$2y$10$jXvccaasRnZEW/zRQkCOyu.aMKSmmVNrKrvk9k5FyQsXr5oowpfVy', 'guru');
+(11, 'g', '$2y$10$TGFfAzcnJ.zWMienv6PY1.oKNCVDzj8TA/AHu.9uF9wSJTldupC.O', 'guru');
 
 --
 -- Indexes for dumped tables
@@ -231,13 +492,29 @@ INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
 --
 ALTER TABLE `attendance`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `attendance_ibfk_1` (`student_id`);
+  ADD KEY `attendance_ibfk_1` (`student_id`),
+  ADD KEY `schedule_id` (`schedule_id`),
+  ADD KEY `schedule_id_2` (`schedule_id`),
+  ADD KEY `mata_pelajaran_id` (`mata_pelajaran_id`);
+
+--
+-- Indexes for table `mata_pelajaran`
+--
+ALTER TABLE `mata_pelajaran`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `reports`
 --
 ALTER TABLE `reports`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `schedule`
+--
+ALTER TABLE `schedule`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`id`);
 
 --
 -- Indexes for table `siswa`
@@ -259,7 +536,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `attendance`
 --
 ALTER TABLE `attendance`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=445;
+
+--
+-- AUTO_INCREMENT for table `mata_pelajaran`
+--
+ALTER TABLE `mata_pelajaran`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `reports`
@@ -268,16 +551,22 @@ ALTER TABLE `reports`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `schedule`
+--
+ALTER TABLE `schedule`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=200;
+
+--
 -- AUTO_INCREMENT for table `siswa`
 --
 ALTER TABLE `siswa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Constraints for dumped tables
@@ -287,7 +576,8 @@ ALTER TABLE `users`
 -- Constraints for table `attendance`
 --
 ALTER TABLE `attendance`
-  ADD CONSTRAINT `attendance_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `siswa` (`id`);
+  ADD CONSTRAINT `attendance_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `siswa` (`id`),
+  ADD CONSTRAINT `attendance_ibfk_2` FOREIGN KEY (`schedule_id`) REFERENCES `schedule` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
