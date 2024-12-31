@@ -137,7 +137,18 @@ $data_absensi = mysqli_fetch_assoc($result_absensi);
                     </div>
                 </div>
             </div>
+            <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Kelola Jadwal</h4>
+                    <p class="card-text">Tambah, edit, dan hapus jadwal pelajaran.</p>
+                    <a href="kelola_jadwal.php" class="btn btn-primary">Kelola Jadwal</a>
+                </div>
+            </div>
         </div>
+
+        </div>
+        
     </div>
 
     <?php include('footer.php'); ?>
